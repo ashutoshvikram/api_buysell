@@ -292,7 +292,7 @@ def contactseller(request,id):
         p_id=id
         seller=Product.objects.get(id=p_id)
        
-        message="Dear"+" "+seller.Seller_id.Firstname+"\n\n\n"+request.session.name+"is interested in your product"+"\n\n\n\n\n"+"From:-"+ email
+        message="Dear"+" "+seller.Seller_id.Firstname+"\n\n\n"+request.session.name+"is interested to buy your"+ seller.Product_name+"\n\n\n\n\n"+"From:-"+ email
         mail = EmailMessage(
                     subject,
                     message,
