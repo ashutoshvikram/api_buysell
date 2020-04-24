@@ -25,7 +25,7 @@ SECRET_KEY = 'go3g4=%i^jx8md8d@a+ks3vt)5qv#1a0y$ode*0hn-iewd47yg'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['buysellit.herokuapp.com']
 
 
 # Application definition
@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
      'corsheaders.middleware.CorsMiddleware', 
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -128,6 +129,7 @@ USE_L10N = True
 USE_TZ = True
 CORS_ORIGIN_WHITELIST = [
         "http://localhost:3000"
+        "https://buysellit.netlify.app"
 ]
 CORS_ALLOW_CREDENTIALS=True
 
